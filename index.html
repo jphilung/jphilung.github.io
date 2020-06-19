@@ -3,18 +3,22 @@
 <head>
   <meta charset="utf-8">
   <title>Jeab-Philippe Ung | Développeur et consultant web à Montréal</title>
-  <link href="https://fonts.googleapis.com/css?family=Lato|Oswald" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lobster&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
 
   <style>
     body {
       font-family: 'Lato', sans-serif;
+      font-weight: 300;
       font-size: 2rem;
       background-color: #FFC20E;
+      line-height: 1.4;
+      margin: 0;
+      color: #403103;
       
     }
     h1,h2,h3,h4,h5,h6 {
-      font-family: 'Oswald', cursive;
+      font-family: 'Lobster', cursive;
       font-weight: bolder;
       margin: 0 0 0.5em 0;
     }
@@ -27,6 +31,7 @@
       width: 100%;
       text-align: right;
       margin-bottom: 0;
+      text-shadow: 5px 5px 0px rgba(0,0,0,0.2);
     }
 
     main {
@@ -34,22 +39,21 @@
       flex-direction: column;
       min-height: 100vh;
       align-items: center;
-      justify-content: center;
+      justify-content: space-between;
       padding: 2rem;
       box-sizing: border-box;
-      
       margin: 0 auto;
     }
 
     @media only screen and (min-width: 768px) {
-      main {
-        width: 66%;
+      .section {
+        max-width: 600px;
       }
     }
 
     @media only screen and (min-width: 1024px) {
-      main {
-        width: 50%;
+      .section {
+        max-width: 600px;
       }
     }
 
@@ -59,26 +63,32 @@
     .buttons {
       margin: 1em 0 0 0;
       display: flex;
-      justify-content: space-around;
+      justify-content: flex-start;
       flex-wrap: wrap;
       width: 100%;
     }
     .button {
-      display: block;
-      padding: 0.5em 1em;
-      background-color: #005BA8;
-      color: #ffffff;
-      text-decoration: none;
-      border-radius: 2.5em;
-      font-size: 1.5rem;
-      margin: 0.5em 0.75em;
+      /* display: block; */
+      /* padding: 0.75em 1em; */
+      /* background-color: white; */
+      color: #7426FF;
+      /* text-decoration: none; */
+      /* font-size: 1.2rem; */
+      /* margin: 0.5em 0.75em; */
+      box-shadow: 0px 3px 36px rgba(100,100,100,0.5);
+      border-radius: 50%;
+      transition: all 0.3s ease-in-out;
     }
 
     .button i {
-      margin-right: 0.5em;
+      /* margin-right: 0.5em; */
     }
     .button:hover {
-      background-color: #003468;
+      box-shadow: 0px 3px 24px rgba(100,100,100,0.75);
+    }
+
+    .button + .button {
+      margin-left: 0.5rem;
     }
     hr {
       height: 6px;
@@ -97,18 +107,36 @@
       margin-left: 0;
       margin-right: auto;
     }
+    footer {
+      display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    }
+    footer p{
+      font-weight: 300;
+      font-size: 1.5rem;
+      text-shadow: 2px 2px 0px rgba(0,0,0,0.2);
+    }
   </style>
 </head>
 <body>
   <main>
       <h1 class="title">Jean-Philippe Ung</h1>
-      <hr class="right-align" />
-      <p>Je suis un développeur web et consultant bien sympathique basé à Montréal. N'hésitez pas à m'appeler ou à m'écrire un courriel pour jaser de vos projets !</p>
-      <hr class="left-align"/>
-      <div class="buttons">
-        <a class="button" href="mailto:info@jpung.me"><i class="fas fa-pen"></i>info@jpung.me</a>
-        <a class="button" href="tel:+15145786916"><i class="fas fa-microphone"></i>+1 514-578-6916</a>
-      </div>
+      <section class="section">
+        <!-- <hr class="right-align"> -->
+        <p>Je suis un développeur web et consultant bien sympathique basé à Montréal.</p>
+        <p>N'hésitez pas à m'appeler ou à m'écrire un courriel pour jaser de vos projets !</p>
+        <!-- <hr class="left-align"> -->
+        <aside class="buttons">
+          <a class="button fa-stack" href="mailto:info@jpung.me"><i class="fas fa-circle fa-stack-2x"></i><i class="fas fa-envelope fa-stack-1x fa-inverse"></i></a>
+          <a class="button fa-stack" href="tel:+15145786916"><i class="fas fa-circle fa-stack-2x"></i><i class="fas fa-phone fa-stack-1x fa-inverse"></i></a>
+        </aside>
+      </section>
+      <footer>
+      <p>E info@jpung.me | T +15145786916</p>
+      </footer>
+      
   </main>
- </body>
+ 
+</body>
 </html>
